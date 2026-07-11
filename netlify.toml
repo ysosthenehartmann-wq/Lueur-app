@@ -1,11 +1,14 @@
 # netlify.toml
 #
-# À placer à la racine de ton projet Netlify (à côté de package.json).
+# Ã€ placer Ã  la racine de ton projet Netlify (Ã  cÃ´tÃ© de package.json).
 # Redirige /api/xxx vers la fonction correspondante dans netlify/functions/xxx.js
 
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
+[build.environment]
+NODE_VERSION = "20"
+ 
 
 [[redirects]]
   from = "/api/*"
